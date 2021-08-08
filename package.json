@@ -4,14 +4,24 @@
   "description": "Cleaner yare-sync, no ts, rollup, etc.",
   "main": "index.js",
   "type": "module",
+  "scripts": {
+    "test" : "node ./test/main.js"
+  },
   "repository": "https://github.com/santanaG/yare-sync-esm",
   "author": "santanaG <gs8777@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/santanaG/yare-sync-esm/issues"
+  },
+  "homepage": "https://github.com/santanaG/yare-sync-esm#readme",
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }
