@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test" : "node ./test/main.js"
+    "test": "node ./test/main.js"
   },
   "repository": "https://github.com/santanaG/yare-sync-esm",
   "author": "santanaG <gs8777@gmail.com>",
