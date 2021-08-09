@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import axios from 'axios'
 
-const { dun, dpw } = ['noUsername', 'noPassword']
+const [dun, dpw] = ['noUsername', 'noPassword']
 
 const login = (user_name = dun, password = dpw) => axios
   .post('https://yare.io/validate', { user_name, password }, { timeout: 5000 })
