@@ -1,12 +1,14 @@
-/* eslint-disable camelcase */
 import WebSocket from 'ws'
+import namingHelper from './helpers/namingHelper.js'
 
-const ws = game => new WebSocket(`wss://yare.io/d1/${game}`)
+const
+  ws = game => new WebSocket(`wss://yare.io/d1/${game}`),
+  { toSnakeCaseSendCode: toSnakeCase } = namingHelper
 
-export default (code, { user_id: u_id, session_id }) => async game => await new Promise(resolve => {
+export default (code, { user, session }) => async game => await new Promise(resolve => {
   const
     session = ws(game),
-    codeData = JSON.stringify({ u_code: code, u_id, session_id })
+    codeData = JSON.stringify(toSnakeCase(code, user, session))
 
   session
     .on('open', _ => resolve(!(session.send(codeData) || session.close())))

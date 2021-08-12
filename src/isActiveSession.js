@@ -1,6 +1,9 @@
 import axios from 'axios'
+import namingHelper from './helpers/namingHelper.js'
 
-export default async ({ user_id: uid, session_id: sid } = {}) => await axios
-  .post('https://yare.io/session', { user_id: uid, session_id: sid })
-  .then(({ data: { username } }) => username === uid)
+const { toSnakeCaseIsActive: toSnakeCase } = namingHelper
+
+export default async ({ user, session }) => await axios
+  .post('https://yare.io/session', toSnakeCase(user, session))
+  .then(({ data: { username } }) => username === user)
   .catch(_ => false)
