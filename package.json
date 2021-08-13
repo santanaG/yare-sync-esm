@@ -1,11 +1,11 @@
 {
   "name": "yare-sync-esm",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Cleaner yare-sync, no ts, rollup, etc.",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node ./test/main.js"
+    "test": "node test.js"
   },
   "repository": "https://github.com/santanaG/yare-sync-esm",
   "author": "santanaG <gs8777@gmail.com>",
