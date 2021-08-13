@@ -10,7 +10,7 @@ export default (code, { user, session }) => async game => await new Promise(reso
     session = ws(game),
     codeData = JSON.stringify(toSnakeCase(code, user, session))
 
-  session
-    .on('open', _ => resolve(!(session.send(codeData) || session.close())))
+  wsSession
+    .on('open', _ => resolve(!(wsSession.send(codeData) || wsSession.close())))
     .on('error', _ => resolve(false))
 })
