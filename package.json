@@ -1,8 +1,8 @@
 {
   "name": "yare-sync-esm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cleaner yare-sync, no ts, rollup, etc.",
-  "main": "index.js",
+  "main": "main.js",
   "type": "module",
   "scripts": {
     "test": "node test.js"
