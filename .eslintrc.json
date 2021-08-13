@@ -1,17 +1,15 @@
 {
-    "ignorePatterns": ["test/main.js"],
-    "env": {
-        "node": true,
-        "es2021": true
-    },
-    "extends": [
-        "standard"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "rules": {
-        "one-var": "off"
-    }
+	"ignorePatterns": ["test.js"],
+	"env": {
+		"node": true,
+		"es2021": true
+	},
+	"extends": ["standard"],
+	"plugins": ["import", "node", "promise"],
+	"parserOptions": {
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"rules": {}
 }
+ 
