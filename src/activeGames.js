@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default async user => await axios
+export default user => axios
   .get(`https://yare.io/active-games/${user}`)
   .then(({ data }) => data?.data === 'no active games' ? [] : data.data)
   .catch(_ => {

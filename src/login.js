@@ -1,11 +1,10 @@
 import axios from 'axios'
 import namingHelper from './helpers/namingHelper.js'
 
-const
-  [dun, dpw] = ['noUsername', 'noPassword'],
-  { toSnakeCaseLogin: toSnakeCase, toCamelCaseLogin: toCamelCase } = namingHelper
+const [dun, dpw] = ['noUsername', 'noPassword']
+const { toSnakeCaseLogin: toSnakeCase, toCamelCaseLogin: toCamelCase } = namingHelper
 
-export default async (userName = dun, password = dpw) => await axios
+export default (userName = dun, password = dpw) => axios
   .post('https://yare.io/validate', toSnakeCase(userName, password), { timeout: 5000 })
   .then(toCamelCase)
   .catch(({ response }) => {
