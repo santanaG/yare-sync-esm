@@ -1,9 +1,8 @@
 import WebSocket from 'ws'
 import namingHelper from './helpers/namingHelper.js'
 
-const
-  ws = game => new WebSocket(`wss://yare.io/d1/${game}`),
-  { toSnakeCaseSendCode: toSnakeCase } = namingHelper
+const ws = game => new WebSocket(`wss://yare.io/d1/${game}`)
+const { toSnakeCaseSendCode: toSnakeCase } = namingHelper
 
 export default (code, { user, session }) => game => new Promise(resolve => {
   const wsSession = ws(game)
